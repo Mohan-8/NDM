@@ -1,0 +1,93 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  box-sizing: border-box;
+}
+
+center {
+  margin-top: 20px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+h1 {
+  color: #333;
+}
+
+span {
+  color: #009688;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+li {
+  margin-bottom: 10px;
+  margin-left: 1rem;
+}
+
+.Department {
+  display: flex;
+  justify-content: space-around;
+}
+.logo {
+  margin: 10px 20px;
+}
+form {
+  margin-top: 20px;
+}
+
+input[type="submit"] {
+  background-color: #009688;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px 50px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #00796b;
+}
+.key {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.App-footer {
+  background-color: #34495e;
+  color: #fff;
+  padding: 1em 0;
+  margin-top: 3.3rem;
+  border-radius: 25px 25px 50px 50px;
+  text-align: center;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.na {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.na img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.l {
+  display: flex;
+  justify-content: center;
+}
