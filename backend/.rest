@@ -1,0 +1,17 @@
+###
+POST https://ndm-backend.vercel.app/api/login
+Content-Type: application/json
+
+{
+    "rollNumber":"20000002",
+    "password":"Hits@123"
+}
+
+###
+Post https://ndm-backend.vercel.app/api/send-email 
+Content-Type: application/json
+
+{
+    "rollNumber":"20000002",
+    "password":"Hits@123"
+}
