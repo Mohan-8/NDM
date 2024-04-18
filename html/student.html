@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>No-Due-Management-System</title>
+    <link rel="icon" href="../asset/4.png" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container border border-info-subtle">
+      <marquee scrolldelay="200"
+        >Welcome To The Great No-Due-Management-System</marquee
+      >
+      <div class="text-end">
+        <form action="./index.html" method="post">
+          <input
+            class="btn btn-info border-primary"
+            type="submit"
+            value="log-out"
+          />
+        </form>
+      </div>
+      <div class="text-center">
+        <h1>Welcome To NDM</h1>
+        <p>Efficiently manage and track dues with our user-friendly system.</p>
+        <div
+          id="carouselExample"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img
+                src="../asset/4.png"
+                width="150px"
+                height="150px"
+                alt="Logo"
+                title="logo"
+                class="img-fluid rounded img-thumbnail"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img
+                src="../asset/img.png"
+                width="150px"
+                height="150px"
+                alt="Logo"
+                title="logo"
+                class="img-fluid rounded img-thumbnail"
+              />
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img
+                src="../asset/img2.png"
+                width="150px"
+                height="150px"
+                alt="Logo"
+                title="logo"
+                class="img-fluid rounded img-thumbnail"
+              />
+            </div>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+      <h1>Welcome, <span id="studentRollNumber"></span></h1>
+      <ol>
+        <li>Student Name</li>
+        <li>Photo</li>
+        <li>Roll Number</li>
+        <li>School of Study</li>
+        <li>Year of Admission</li>
+        <li>Address of Student</li>
+        <li>Contact Number</li>
+        <li>Email ID</li>
+      </ol>
+      <ul>
+        <li>HOD</li>
+        <li>DEAN</li>
+        <li>Student Affairs</li>
+        <li>Alumni</li>
+        <li>Transport</li>
+        <li>Finance</li>
+        <li>Library</li>
+        <li>NAD</li>
+      </ul>
+      <br />
+      <button class="btn btn-primary" onclick="window.print()">Download</button>
+      <br /><br />
+      <br />
+      <br />
+      <footer class="bg-dark text-light rounded text-center text-lg-start">
+        <div class="text-center p-3">
+          <p>&copy; 2024 NDM by BMK</p>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+      var rollNumber = getParameterByName("rollnumber");
+      document.getElementById("studentRollNumber").textContent = rollNumber;
+    </script>
+  </body>
+</html>

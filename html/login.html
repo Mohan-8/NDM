@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>No-Due-Management-System</title>
+    <link rel="icon" href="../asset/4.png" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="../js/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container text-center border border-info-subtle">
+      <marquee scrolldelay="200"
+        >Welcome To The Great No-Due-Management-System</marquee
+      >
+      <h1>Welcome To NDM</h1>
+      <p>Efficiently manage and track dues with our user-friendly system.</p>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="5000">
+            <img
+              src="../asset/4.png"
+              width="150px"
+              height="150px"
+              alt="Logo"
+              title="logo"
+              class="img-fluid rounded img-thumbnail"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="../asset/img.png"
+              width="150px"
+              height="150px"
+              alt="Logo"
+              title="logo"
+              class="img-fluid rounded img-thumbnail"
+            />
+          </div>
+          <div class="carousel-item" data-bs-interval="5000">
+            <img
+              src="../asset/img2.png"
+              width="150px"
+              height="150px"
+              alt="Logo"
+              title="logo"
+              class="img-fluid rounded img-thumbnail"
+            />
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <div id="ca" class="card text-center border border-primary">
+        <div class="card-header border-primary">Login</div>
+        <div class="card-body">
+          <form id="loginForm" method="post">
+            <label>Roll Number:<span>&#9733;</span></label>
+            <input
+              class="border-primary"
+              type="text"
+              name="rollnumber"
+              id="rollnumber"
+              placeholder="Roll Number..."
+              required
+              pattern="[0-9]{8}"
+              title="Please enter a valid roll number &#10; It should be of 8
+            digits &#10; It should not contain any special characters &#10;"
+            />
+            <div id="rndHelpBlock" class="form-text">
+              Please enter a valid roll number &#10; It should be of 8 digits
+              &#10; It should not contain any special characters &#10;
+            </div>
+            <br />
+            <label>Password:<span>&#9733;</span></label>
+            <input
+              class="border-primary"
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password..."
+              required
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,12}$"
+              title="Password contains at least one uppercase letter, &#10; one
+            lowercase letter, &#10; one digit and one special character &#10;
+            Password length should be between 6 to 12"
+            />
+            <div id="passwordHelpBlock" class="form-text">
+              Password contains at least one uppercase letter, &#10; one
+              lowercase letter, &#10; one digit and one special character &#10;
+              Password length should be between 6 to 12
+            </div>
+            <br /><br />
+            <input
+              class="btn btn-info border-primary"
+              type="button"
+              onclick="login(event)"
+              value="Login"
+            />
+          </form>
+        </div>
+        <div class="card-footer text-body-secondary">
+          <a href="admin.html"
+            >If don't have Roll Number and Password? click here to Contact
+            admin</a
+          >
+        </div>
+      </div>
+
+      <br />
+
+      <footer class="bg-dark text-light rounded text-center text-lg-start">
+        <div class="text-center p-3">
+          <p>&copy; 2024 NDM by BMK</p>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var rollNumber = document.getElementById("rollnumber").value;
+          console.log(rollNumber);
+          var isValid = true;
+          if (isValid) {
+            window.location.href =
+              "./student.html?rollnumber=" + encodeURIComponent(rollNumber);
+            var alertHtml =
+              '<div class="alert alert-success alert-dismissible fade show" role="alert">';
+            alertHtml += "Login Successful!";
+            alertHtml +=
+              '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+            alertHtml += "</div>";
+            document
+              .getElementById("loginForm")
+              .insertAdjacentHTML("afterend", alertHtml);
+          } else {
+            var alertHtml =
+              '<div class="alert alert-danger alert-dismissible fade show" role="alert">';
+            alertHtml += "Login Failed! Please check your credentials.";
+            alertHtml +=
+              '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>';
+            alertHtml += "</div>";
+            document
+              .getElementById("loginForm")
+              .insertAdjacentHTML("afterend", alertHtml);
+          }
+        });
+    </script>
+  </body>
+</html>
