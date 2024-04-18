@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>No-Due-Management-System</title>
+    <link rel="icon" href="../asset/logo.jpg" />
+  </head>
+
+  <body>
+    <marquee scrolldelay="200"
+      >Welcome To The Great No-Due-Management-System</marquee
+    >
+    <center>
+      <h1>Welcome To NDM</h1>
+      <p>Efficiently manage and track dues with our user-friendly system.</p>
+      <img src="../asset/logo.jpg" width="150px" height="150px" /><br /><br />
+      <form method="post" action="./student.html">
+        <label>Roll Number:<span>&#9733;</span></label>
+        <input
+          type="text"
+          name="rollnumber"
+          placeholder="Roll Number..."
+          required
+          pattern="[0-9]{8}"
+          title="Please enter a valid roll number &#10; It should be of 8 digits &#10; It should not contain any special characters &#10;"
+        /><br /><br />
+        <label>Password:<span>&#9733;</span></label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password..."
+          required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,12}$"
+          title="Password contains at least one uppercase letter, &#10; one lowercase letter, &#10; one digit and one special character &#10; Password length should be between 6 to 12"
+        /><br /><br />
+        <input type="submit" value="Login" />
+      </form>
+      <br />
+      <a href="admin.html"
+        >If don't have Roll Number and Password? click here to Contact admin</a
+      >
+    </center>
+    <footer class="App-footer">
+      <div class="container">
+        <p>&copy; 2024 NDM by BMK</p>
+      </div>
+    </footer>
+  </body>
+</html>
